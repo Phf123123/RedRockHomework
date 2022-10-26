@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二/LV2</title>
+    <style type="text/css">
+html,body{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#大div{
+    background-color: white;
+    width: 460px;
+    height: 580px;
+    border:1px solid black;
+    border-radius: 20px;
+    box-shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#大div:hover{
+    box-shadow:0px 0px 10px 10px rgba(0,0,0,0.1);;
+    transform: scale(1.01);
+}
+#装图片的div{
+    width: 460px;
+    height:260px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.5s;
+}
+img:hover{
+    transform:scale(1.1);
+}
+#文本的div{
+    width:460px;
+    height:220px;
+}
+#总括{
+    font-size: medium;
+    color:gray;
+    margin-bottom: -10px;
+}
+#简介{
+    font-size:medium;
+    color:rgb(128, 123, 123);
+    padding:15px;
+}
+#按钮的div{
+    width: 170px;
+    height: 45px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 20px;
+    background-color: rgb(23, 49, 177);
+    opacity :0.5;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 45px;
+    color:white;
+}
+#按钮的div:hover{
+    background-color: blue;
+    opacity :1;
+}
+    </style>
+</head>
+<body>
+    <div id="大div">
+        <div id="装图片的div"><img src="作业里的images/红岩前端.jpg"></div>  
+        <div id="文本的div">
+            <h2>&nbsp;&nbsp;前端研发部</h2>
+            <p id="总括">&nbsp;&nbsp将想法画成现实，让数据激发可能</p>
+            <p id="简介">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是想法的实现者，在这里，你可以把你天马行空的
+            想象画成现实，利用手中的三剑客 (HTML， CSS， JS) 绘
+            画出绚丽的光景；在这里，你亦可以利用身边的工具
+            &nbsp;&nbsp;(nodejs， ts， react等) 让数据激发无限潜能，创造属于自
+            己的一万种可能。加入我们，一起去前端的世界探索未知!
+            </p>
+        </div>
+        <div id="按钮的div">加入我们</div>
+    </div>
+</body>
+</html>

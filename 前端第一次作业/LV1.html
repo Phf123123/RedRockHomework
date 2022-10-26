@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一/LV1</title>
+    <style type="text/css">
+       #大div{
+        width: 1080px;
+        height: 570px;
+        position:relative;
+        margin: auto;
+        background-color: white;
+        text-align: center;
+        top: 45.5px;
+        border-color:black;      
+        border-style: solid;
+        }
+        /* 这个大盒子垂直居中是根据我的屏幕大小以及窗口化设置的，所以全屏后主体不一定垂直居中，见谅啦，主要我太菜了呜呜 */
+        li{
+            list-style: none;
+        }
+        .box li{
+        width:auto;
+        height:auto;
+        float:right;
+        position:relative;
+        background-color:white;
+        top: 16px;
+        margin-right: 16px;
+        font-size:0.08px;
+        }
+        .box div{
+            background-color: blue;
+        }
+        #百度图片的div {
+        width: 168px;
+        height: 76px;
+        position:absolute;
+        left:456px;
+        top: 110px;
+        background-color:white;
+        display: inline-block;
+        }
+        #百度搜索的div {
+        width: 470px;
+        height: 25px;
+        position:absolute;
+        left:305px;
+        top: 200px;
+        background-color:white;
+        display: inline-block;
+        }
+        .input {
+        width: 390px;
+        height: 20px;
+        float:left;
+        border-color: white;
+        border-bottom: 1px;
+        }
+        .按钮 {
+        width: 70px;
+        height:26px;
+        float:left;
+        line-height: 25px;
+        background-color: blue;
+        }
+        #百度二维码的div {
+        width: 140px;
+        height: 110px;
+        position:absolute;
+        left:470px;
+        top: 345px;
+        background-color:white;
+        display: inline-block;
+        line-height: 3px;
+        }
+        #p1{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: small;
+        }
+        #p2{
+        display:inline-block;
+        margin-top: 3px;
+        font-size:2px;
+        }
+        #小字1的div {
+        width: 300px;
+        height: 15px;
+        position:absolute;
+        left:390px;
+        top: 480px;
+        background-color:white;
+        display: inline-block;
+        }
+        #p3{
+        width: auto;
+        height: 12px;
+        float:left;
+        margin-right: 15px;
+        font-size: 0.1px;
+        }
+        #小字1的div .last1{
+            margin-right: 0px;
+        }
+        #小字2的div {
+        width: 380px;
+        height: 15px;
+        position:absolute;
+        left:350px;
+        top: 510px;
+        background-color:white;
+        display: inline-block;
+        }
+        #p4{
+        width: auto;
+        height: 12px;
+        float:left;
+        margin-right: 1px;
+        font-size: 0.1px;
+        }
+        #小字2的div .last2{
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="大div">
+    <ul class="box">
+          <li><a href="#" target="_blank"><div style="color:white">更多产品</div></a></li>
+          <li><a href="#" target="_blank">设置</a></li>
+          <li><a href="#" target="_blank">登陆</a></li>
+          <li><a href="#" target="_blank">学术</a></li>
+          <li><a href="#" target="_blank">贴吧</a></li>
+          <li><a href="#" target="_blank">视频</a></li>
+          <li><a href="#" target="_blank">地图</a></li>
+          <li><a href="#" target="_blank">hao123</a></li>
+          <li><a href="#" target="_blank">新闻</a></li>
+    </ul>
+    <div id="百度图片的div"><img src="作业里的images/百度.jpg"></img></div>
+    <div id="百度搜索的div">
+          <input placeholder="" class="input">       
+          <input type="submit" value="百度一下" class="按钮" style="color:white"/>
+    </div>
+    <div id="百度二维码的div">
+        <img src="作业里的images/百度的二维码.jpg"></img>
+        <p id="p1">下载百度app</p>
+        <p id="p2" style="color:gray">有事搜一搜，没事看一看</p>
+    </div>
+    <div id="小字1的div">
+        <p id="p3" style="color:gray">把百度作为首页</p>
+        <p id="p3" style="color:gray">关于百度</p>
+        <p id="p3" style="color:gray">About Baidu</p>
+        <p id="p3" style="color:gray" class="last1" >百度推广</p>
+    </div>
+    <div id="小字2的div">
+        <p id="p4" style="color:gray">@2019_Baidu</p>
+        <p id="p4" style="color:gray"><a href="#" target="_blank">使用百度前必读</a></p>
+        <p id="p4" style="color:gray"><a href="#" target="_blank">意见反馈</a></p>
+        <p id="p4" style="color:gray">***证***号</p>
+        <p id="p4" style="color:gray" class="last2">phf制作_66666号</p>
+    </div>
+</div>   
+</body>
+</html>

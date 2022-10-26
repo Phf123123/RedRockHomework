@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零/LV1</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>这是一个二级标题</h2>
+    <p>网课两小时，自学半星期😭</p>
+    <h3>这是一个三级标题</h3>
+    <img src="作业里的images/揉卷娘.gif" title="卷娘嘿嘿卷娘"><br>
+    <div>我是一个宽200px高100px的红色盒子</div>
+    <a href="https://www.bilibili.com/video/BV1ya411a7gS/?spm_id_from=333.999.0.0&vd_s" target="_blank">点我可以见到卷娘的诞生</a>
+    <ul>
+        <li>我</li>
+        <li>爱</li>
+        <li>红</li>
+        <li>岩</li>
+        <li>❤️</li>
+    </ul>
+    <hr>
+    <input placeholder="没什么用的输入框">
+    <input type="submit" value="一个按钮"/><br>
+    <table border="2">
+    <tr>
+    <th>账号</th>
+    <th><input type="text"></th>
+    </tr>
+    <tr>
+    <th>密码</th>
+    <th><input type="password"></th>
+    </tr>
+    <tr>
+    <th colspan="2"><input type="submit" value="提交"/><input type="reset" value="重置"/></th>
+    </tr>
+    </table>
+    <p><strong>下面来个简介以及对红岩的期待吧</strong></p>
+    性别:
+    <input type="radio" name="sex" value="男"> 男
+    <input type="radio" name="sex" value="女"> 女
+    在红岩的部门:
+    <input type="checkbox" value="产品">产品
+    <input type="checkbox" value="视设">视设
+    <input type="checkbox" value="前端">前端
+    <input type="checkbox" value="后端">后端
+    <input type="checkbox" value="运维">运维
+    <input type="checkbox" value="开发">开发<br>
+    城市:
+    <form>
+        <select>
+            <option value="江西">江西</option>
+            <option value="重庆" selected="selected">重庆</option>
+            <option value="河北">河北</option>
+            <option value="湖南">湖南</option>
+        </select>
+    </form>
+    <form method="post" action="save.php">
+        <label>简介</label>
+        <textarea cols="40" rows="10" placeholder="我要努力加入前端！"></textarea> 
+    </form>
+</body>
+</html>

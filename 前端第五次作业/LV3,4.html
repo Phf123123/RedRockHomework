@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv3,4</title>
+    <style type="text/css">
+        html,textarea{
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+        }
+        button{
+            background-color:skyblue;
+            color:white;
+            width:340px;
+            border-radius: 10px;
+        }
+        li{
+            list-style: none;
+            width:300px;
+        }
+        li a{
+            float:right;
+            text-decoration: none;
+        }
+        div p{
+            margin:0px;
+            text-align: center;
+        }
+        form{
+            display: inline-block;
+        }
+        select{
+            float:right;
+            width:340px;
+            height:30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label></label>
+        <textarea cols="40" rows="5" placeholder="在此输入评论"></textarea>
+    </form>
+    <hr>
+    <!-- <div>
+    <p>选择一个颜色:</p>
+      <form>
+        <select onchange="changeColor()">
+            <option id="red">红</option>
+            <option id="green">绿</option>
+            <option id="blue">蓝</option>
+            <option id="yellow">黄</option>
+            <option id="black" selected="selected">黑</option>
+        </select>
+      </form>
+    </div> -->
+    <button>提交</button>
+    <hr>
+    <ul>
+    
+    </ul>
+    <script>
+        let btn = document.querySelector('button');
+        let text = document.querySelector('textarea');
+        let ul = document.querySelector('ul');
+        btn.onclick = function()
+    {
+        let li = document.createElement('li');
+        li.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
+        ul.insertBefore(li,ul.children[0]);
+        let delect = document.querySelectorAll('a');
+        text.value = '';
+        for(let x = 0;x<delect.length;x++)
+        {
+        delect[x].onclick = function()
+          {
+            ul.removeChild(this.parentNode);
+          }
+        }
+    }
+    </script>
+</body>
+</html>

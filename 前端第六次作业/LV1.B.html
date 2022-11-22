@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise链式回调</title>
+    <style>
+        .moved{
+            width:100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="moved" style="background-color:red"></div>
+    <div class="moved" style="background-color:greenyellow"></div>
+    <div class="moved" style="background-color:skyblue"></div>
+    <script>
+        let moved = document.getElementsByClassName('moved');
+        let timer = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                moved[0].style.transform = 'translate(500px,0)';
+                moved[0].style.transitionDuration = '1s';
+            },2000) 
+        resolve(4000);
+        }).then((time2) => {
+            setTimeout(() => {
+                moved[1].style.transform = 'translate(500px,0)';
+                moved[1].style.transitionDuration = '1s';
+            },time2)
+        return 6000;
+        }).then((time3) => {
+            setTimeout(() => {
+                moved[2].style.transform = 'translate(500px,0)';
+                moved[2].style.transitionDuration = '1s';
+            },time3)
+        })
+    </script>
+</body>
+</html>

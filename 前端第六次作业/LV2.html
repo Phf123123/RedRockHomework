@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lv2</title>
+  <style>
+    html body{
+      display: flex;
+      justify-content: center;
+    }
+    div{
+      width: 450px;
+      height: 150px;
+    }
+    h2{
+      position: relative;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h2>《记承天寺夜游》</h2>
+  <p></p>
+</div>
+<script>
+  let realP = document.querySelector('p');
+  let text = '元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。'
+  let time = 2000; 
+  let x = 0;
+  let sleep = () => {
+  return new Promise((resolve) => {
+    if(x<text.length){
+    realP.innerText += text[x];
+    x++;
+    setTimeout(() => {sleep()},100)};
+  resolve();
+    })
+  }
+  sleep();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv3</title>
+</head>
+<body>
+    <button>发送请求</button>
+    <script>
+    const btn = document.querySelector("button");
+        btn.addEventListener("click", async () => {
+            const res = await fetch("https://taskapi.chovrio.club/chatroom",{
+                method:"get",
+                headers:{
+                    Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzgsInVzZXJuYW1lIjoicGhmMTIzMTIzIiwiYXZhdGFyIjoiIiwiaWF0IjoxNjcwMDcyNzM4LCJleHAiOjE2NzI2NjQ3Mzh9.QBqT2mlcPMdt0oTaV_ypaD9GgbvVWKL7vTBGialYuK0"
+                }
+            })
+            const data = await res.text();
+            console.log(data);
+         })
+    </script>
+</body>
+</html>

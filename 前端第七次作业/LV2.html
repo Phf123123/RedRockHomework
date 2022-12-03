@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+<body>
+    <button id="reginster">reginster</button>
+    <button id="login">login</button>
+    <script>
+        const reginster = document.getElementById("reginster");
+        reginster.addEventListener("click", async () => {
+            const res = await fetch("https://taskapi.chovrio.club/users/register",{
+                method:"post",
+                body:JSON.stringify({
+                    username:"login",
+                    password:"password",
+                })
+            })
+            const data = await res.json();
+            console.log(data);
+        })
+        const login = document.getElementById("login");
+        login.addEventListener("click", async () => {
+            const resAgain = await fetch("https://taskapi.chovrio.club/users/login",{
+                method:"post",
+                body:JSON.stringify({
+                    username:"phf123123",
+                    password:"redRock",
+                })
+            })
+            const content = await resAgain.json();
+            console.log(content);
+        })
+    </script>
+</body>
+</html>
